@@ -1,0 +1,15 @@
+opencti:
+  url: 'http://localhost:8080'
+  token: 'ChangeMe'
+
+connector:
+  id: 'ChangeMe'
+  type: 'INTERNAL_ENRICHMENT'
+  name: 'IpInfo'
+  scope: 'ipv4-addr'
+  confidence_level: 3
+  log_level: 'info'
+
+ipinfo:
+  token: 'ChangeMe'
+  max_tlp: 'TLP:AMBER'

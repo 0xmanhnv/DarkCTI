@@ -1,0 +1,8 @@
+.vscode
+.idea
+__pycache__
+*.log
+*.iml
+test
+config.yml
+docker-compose-test.yml

@@ -1,0 +1,22 @@
+opencti:
+  url: 'http://localhost:8080'
+  token: 'ChangeMe'
+
+connector:
+  id: 'ChangeMe'
+  type: 'EXTERNAL_IMPORT'
+  name: 'MISP' # Required
+  scope: 'misp'
+  confidence_level: 3
+  update_existing_data: False
+  log_level: 'info'
+
+misp:
+  url: 'http://localhost' # Required
+  key: 'ChangeMe' # Required
+  ssl_verify: False # Required
+  create_reports: True # Required, create report for MISP event
+  report_class: 'MISP event' # Optional, report_class if creating report for event
+  import_from_date: '2010-01-01' # Optional, import all event from this date
+  import_tags: 'opencti:import,type:osint' # Optional, list of tags used for import events
+  interval: 1 # Required, in minutes

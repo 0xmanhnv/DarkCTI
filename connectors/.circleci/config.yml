@@ -1,0 +1,233 @@
+version: 2.1
+
+jobs:
+  ensure_formatting:
+    docker:
+      - image: circleci/python:3.7.7
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: sudo pip3 install black
+      - run:
+          name: confirm black version
+          command: black --version
+      - run:
+          name: run black check
+          command: black --check .
+  linter:
+    docker:
+      - image: alpine/flake8
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: flake8
+          command: flake8 --ignore=E,W ~/repo
+  build:
+    working_directory: ~/opencti
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          working_directory: ~/opencti/import-file-stix
+          name: Build Docker image opencti/connector-import-file-stix
+          command: docker build -t opencti/connector-import-file-stix:latest . && docker tag opencti/connector-import-file-stix:latest opencti/connector-import-file-stix:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/import-file-pdf-observables
+          name: Build Docker image opencti/connector-import-file-pdf-observables
+          command: docker build -t opencti/connector-import-file-pdf-observables:latest . && docker tag opencti/connector-import-file-pdf-observables:latest opencti/connector-import-file-pdf-observables:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/export-file-stix
+          name: Build Docker image opencti/connector-export-file-stix
+          command: docker build -t opencti/connector-export-file-stix:latest . && docker tag opencti/connector-export-file-stix:latest opencti/connector-export-file-stix:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/export-file-csv
+          name: Build Docker image opencti/connector-export-file-csv
+          command: docker build -t opencti/connector-export-file-csv:latest . && docker tag opencti/connector-export-file-csv:latest opencti/connector-export-file-csv:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/alienvault
+          name: Build Docker image opencti/connector-alienvault
+          command: docker build -t opencti/connector-alienvault:latest . && docker tag opencti/connector-alienvault:latest opencti/connector-alienvault:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/crowdstrike
+          name: Build Docker image opencti/connector-crowdstrike
+          command: docker build -t opencti/connector-crowdstrike:latest . && docker tag opencti/connector-crowdstrike:latest opencti/connector-crowdstrike:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/cryptolaemus
+          name: Build Docker image opencti/connector-cryptolaemus
+          command: docker build -t opencti/connector-cryptolaemus:latest . && docker tag opencti/connector-cryptolaemus:latest opencti/connector-cryptolaemus:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/cyber-threat-coalition
+          name: Build Docker image opencti/connector-cyber-threat-coalition
+          command: docker build -t opencti/connector-cyber-threat-coalition:latest . && docker tag opencti/connector-cyber-threat-coalition:latest opencti/connector-cyber-threat-coalition:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/misp
+          name: Build Docker image opencti/connector-misp
+          command: docker build -t opencti/connector-misp:latest . && docker tag opencti/connector-misp:latest opencti/connector-misp:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/mitre
+          name: Build Docker image opencti/connector-mitre
+          command: docker build -t opencti/connector-mitre:latest . && docker tag opencti/connector-mitre:latest opencti/connector-mitre:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/opencti
+          name: Build Docker image opencti/connector-opencti
+          command: docker build -t opencti/connector-opencti:latest . && docker tag opencti/connector-opencti:latest opencti/connector-opencti:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/cve
+          name: Build Docker image opencti/connector-cve
+          command: docker build -t opencti/connector-cve:latest . && docker tag opencti/connector-cve:latest opencti/connector-cve:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/amitt
+          name: Build Docker image opencti/connector-amitt
+          command: docker build -t opencti/connector-amitt:latest . && docker tag opencti/connector-amitt:latest opencti/connector-amitt:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/ipinfo
+          name: Build Docker image opencti/connector-ipinfo
+          command: docker build -t opencti/connector-ipinfo:latest . && docker tag opencti/connector-ipinfo:latest opencti/connector-ipinfo:${CIRCLE_TAG}
+      - run:
+          working_directory: ~/opencti/virustotal
+          name: Build Docker image opencti/connector-virustotal
+          command: docker build -t opencti/connector-virustotal:latest . && docker tag opencti/connector-virustotal:latest opencti/connector-virustotal:${CIRCLE_TAG}
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push opencti/connector-import-file-stix:latest
+            docker push opencti/connector-import-file-stix:${CIRCLE_TAG}
+            docker push opencti/connector-import-file-pdf-observables:latest
+            docker push opencti/connector-import-file-pdf-observables:${CIRCLE_TAG}
+            docker push opencti/connector-export-file-stix:latest
+            docker push opencti/connector-export-file-stix:${CIRCLE_TAG}
+            docker push opencti/connector-export-file-csv:latest
+            docker push opencti/connector-export-file-csv:${CIRCLE_TAG}
+            docker push opencti/connector-alienvault:latest
+            docker push opencti/connector-alienvault:${CIRCLE_TAG}
+            docker push opencti/connector-crowdstrike:latest
+            docker push opencti/connector-crowdstrike:${CIRCLE_TAG}
+            docker push opencti/connector-cryptolaemus:latest
+            docker push opencti/connector-cryptolaemus:${CIRCLE_TAG}
+            docker push opencti/connector-cyber-threat-coalition:latest
+            docker push opencti/connector-cyber-threat-coalition:${CIRCLE_TAG}
+            docker push opencti/connector-misp:latest
+            docker push opencti/connector-misp:${CIRCLE_TAG}
+            docker push opencti/connector-mitre:latest
+            docker push opencti/connector-mitre:${CIRCLE_TAG}
+            docker push opencti/connector-opencti:latest
+            docker push opencti/connector-opencti:${CIRCLE_TAG}
+            docker push opencti/connector-cve:latest
+            docker push opencti/connector-cve:${CIRCLE_TAG}
+            docker push opencti/connector-amitt:latest
+            docker push opencti/connector-amitt:${CIRCLE_TAG}
+            docker push opencti/connector-ipinfo:latest
+            docker push opencti/connector-ipinfo:${CIRCLE_TAG}
+            docker push opencti/connector-virustotal:latest
+            docker push opencti/connector-virustotal:${CIRCLE_TAG}
+  build_rolling:
+    working_directory: ~/opencti
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          working_directory: ~/opencti/import-file-stix
+          name: Build Docker image opencti/connector-import-file-stix
+          command: docker build -t opencti/connector-import-file-stix:rolling .
+      - run:
+          working_directory: ~/opencti/import-file-pdf-observables
+          name: Build Docker image opencti/connector-import-file-pdf-observables
+          command: docker build -t opencti/connector-import-file-pdf-observables:rolling .
+      - run:
+          working_directory: ~/opencti/export-file-stix
+          name: Build Docker image opencti/connector-export-file-stix
+          command: docker build -t opencti/connector-export-file-stix:rolling .
+      - run:
+          working_directory: ~/opencti/export-file-csv
+          name: Build Docker image opencti/connector-export-file-csv
+          command: docker build -t opencti/connector-export-file-csv:rolling .
+      - run:
+          working_directory: ~/opencti/alienvault
+          name: Build Docker image opencti/connector-alienvault
+          command: docker build -t opencti/connector-alienvault:rolling .
+      - run:
+          working_directory: ~/opencti/crowdstrike
+          name: Build Docker image opencti/connector-crowdstrike
+          command: docker build -t opencti/connector-crowdstrike:rolling .
+      - run:
+          working_directory: ~/opencti/cryptolaemus
+          name: Build Docker image opencti/connector-cryptolaemus
+          command: docker build -t opencti/connector-cryptolaemus:rolling .
+      - run:
+          working_directory: ~/opencti/cyber-threat-coalition
+          name: Build Docker image opencti/connector-cyber-threat-coalition
+          command: docker build -t opencti/connector-cyber-threat-coalition:rolling .
+      - run:
+          working_directory: ~/opencti/misp
+          name: Build Docker image opencti/connector-misp
+          command: docker build -t opencti/connector-misp:rolling .
+      - run:
+          working_directory: ~/opencti/mitre
+          name: Build Docker image opencti/connector-mitre
+          command: docker build -t opencti/connector-mitre:rolling .
+      - run:
+          working_directory: ~/opencti/opencti
+          name: Build Docker image opencti/connector-opencti
+          command: docker build -t opencti/connector-opencti:rolling .
+      - run:
+          working_directory: ~/opencti/cve
+          name: Build Docker image opencti/connector-cve
+          command: docker build -t opencti/connector-cve:rolling .
+      - run:
+          working_directory: ~/opencti/amitt
+          name: Build Docker image opencti/connector-amitt
+          command: docker build -t opencti/connector-amitt:rolling .
+      - run:
+          working_directory: ~/opencti/ipinfo
+          name: Build Docker image opencti/connector-ipinfo
+          command: docker build -t opencti/connector-ipinfo:rolling .
+      - run:
+          working_directory: ~/opencti/virustotal
+          name: Build Docker image opencti/connector-virustotal
+          command: docker build -t opencti/connector-virustotal:rolling .
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push opencti/connector-import-file-stix:rolling
+            docker push opencti/connector-import-file-pdf-observables:rolling
+            docker push opencti/connector-export-file-stix:rolling
+            docker push opencti/connector-export-file-csv:rolling
+            docker push opencti/connector-alienvault:rolling
+            docker push opencti/connector-crowdstrike:rolling
+            docker push opencti/connector-cryptolaemus:rolling
+            docker push opencti/connector-cyber-threat-coalition:rolling
+            docker push opencti/connector-misp:rolling
+            docker push opencti/connector-mitre:rolling
+            docker push opencti/connector-opencti:rolling
+            docker push opencti/connector-cve:rolling
+            docker push opencti/connector-amitt:rolling
+            docker push opencti/connector-ipinfo:rolling
+            docker push opencti/connector-virustotal:rolling
+workflows:
+  version: 2
+  check-code:
+    jobs:
+      - ensure_formatting
+      - linter
+  opencti:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
+      - build_rolling:
+          filters:
+            branches:
+              only:
+                - master
