@@ -26,9 +26,9 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-        ports:
-          - 9200:9200
-          - 9300:9300
+    ports:
+      - 9200:9200
+      - 9300:9300
   minio:
     image: minio/minio:RELEASE.2020-02-27T00-23-05Z
     volumes:
