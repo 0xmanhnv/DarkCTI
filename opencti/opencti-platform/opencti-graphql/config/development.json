@@ -44,6 +44,42 @@
   "providers": {
     "local": {
       "strategy": "LocalStrategy"
+    },
+    "ldap": {
+      "strategy": "LdapStrategy",
+      "config": {
+        "url": "ldap://mydc.limeo.org:389",
+        "bind_dn": "cn=Administrator,cn=Users,dc=limeo,dc=org",
+        "bind_credentials": "XXXXXXXXXX",
+        "search_base": "cn=Users,dc=limeo,dc=org",
+        "search_filter": "(cn={{username}})",
+        "email_attribute": "userPrincipalName",
+        "account_attribute": "name"
+      }
+    },
+    "facebook": {
+      "strategy": "FacebookStrategy",
+      "config": {
+        "client_id": "193091148641185",
+        "client_secret": "cc8021eb951e2067c51e577f3fc7b185",
+        "callback_url": "https://darkcti.com/auth/facebook/callback"
+      }
+    },
+    "google": {
+      "strategy": "GoogleStrategy",
+      "config": {
+        "client_id": "XXXXXXXXXXXXXXXXXX",
+        "client_secret": "XXXXXXXXXXXXXXXXXX",
+        "callback_url": "https://demo.opencti.io/auth/google/callback"
+      }
+    },
+    "github": {
+      "strategy": "GithubStrategy",
+      "config": {
+        "client_id": "XXXXXXXXXXXXXXXXXX",
+        "client_secret": "XXXXXXXXXXXXXXXXXX",
+        "callback_url": "https://demo.opencti.io/auth/github/callback"
+      }
     }
   }
 }
