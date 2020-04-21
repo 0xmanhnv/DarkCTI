@@ -3,14 +3,15 @@ services:
   connector-virustotal:
     image: opencti/connector-virustotal:3.1.0
     environment:
-      - OPENCTI_URL=http://localhost
-      - OPENCTI_TOKEN=ChangeMe
-      - CONNECTOR_ID=ChangeMe
+      - OPENCTI_URL=${OPENCTI_URL}
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_VIRUSTOTAL_ID} 
       - CONNECTOR_TYPE=INTERNAL_ENRICHMENT
       - CONNECTOR_NAME=VirusTotal
       - CONNECTOR_SCOPE='file-md5,file-sha1,file-sha256'
       - CONNECTOR_CONFIDENCE_LEVEL=3
       - CONNECTOR_LOG_LEVEL=info
-      - VIRUSTOTAL_TOKEN=ChangeMe
+      - VIRUSTOTAL_TOKEN=907c37f0ab21398a4b98651e094c65a2ad183188892bd098bbd74f92b27864d9
       - VIRUSTOTAL_MAX_TLP=TLP:AMBER
     restart: always
+    network_mode: "host"

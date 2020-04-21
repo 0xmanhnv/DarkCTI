@@ -3,9 +3,9 @@ services:
   connector-cryptolaemus:
     image: opencti/connector-cryptolaemus:3.1.0
     environment:
-      - OPENCTI_URL=http://localhost
-      - OPENCTI_TOKEN=ChangeMe
-      - CONNECTOR_ID=ChangeMe
+      - OPENCTI_URL=${OPENCTI_URL}
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_CRYPTOLAEMUS_ID}
       - CONNECTOR_TYPE=EXTERNAL_IMPORT
       - CONNECTOR_NAME=Cryptolaemus
       - CONNECTOR_SCOPE=cryptolaemus
@@ -13,3 +13,4 @@ services:
       - CONNECTOR_UPDATE_EXISTING_DATA=true
       - CONNECTOR_LOG_LEVEL=info
     restart: always
+    network_mode: "host"
