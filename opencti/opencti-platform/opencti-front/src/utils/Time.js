@@ -17,10 +17,12 @@ export const parse = (date) => moment(date);
 export const now = () => moment().format();
 
 export const dayAgo = () => moment().subtract(1, 'days').format();
-
 export const monthsAgo = (number) => moment().subtract(number, 'months').format();
-
 export const yearsAgo = (number) => moment().subtract(number, 'years').format();
+
+export const dayLatter = () => moment().add(1, 'days').format();
+export const monthsLatter = (number) => moment().add(number, 'months').format();
+export const yearsLatter = (number) => moment().add(number, 'years').format();
 
 export const yearFormat = (data) => (data && data !== '-' ? parse(data).format(yearDateFormat) : '');
 
