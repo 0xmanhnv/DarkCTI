@@ -855,4 +855,4 @@ const fr = {
     INTERNAL_ENRICHMENT: 'Enrichissement',
     }
 
-export default vi;
+export default fr;
