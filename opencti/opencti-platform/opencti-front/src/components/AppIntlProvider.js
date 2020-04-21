@@ -19,7 +19,7 @@ const AppIntlProvider = (props) => {
     const matchingLocale = /for locale: "([a-z]+)"/gm;
     const regMatch = matchingLocale.exec(error);
     const currentLocale = regMatch !== null ? regMatch[1] : null;
-    if (currentLocale && currentLocale !== 'en') console.error(error);
+    if (currentLocale && currentLocale !== 'en' && currentLocale !== 'vi' && currentLocale !== 'fr') console.error(error);
   };
   const platformLanguage = pathOr(
     null,
