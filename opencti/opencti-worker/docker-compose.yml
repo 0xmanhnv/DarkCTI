@@ -6,8 +6,8 @@ services:
       - OPENCTI_URL=http://localhost:4000
       - OPENCTI_TOKEN=815dd7b7-1b96-4cb1-9b0e-27d9a3d88fdb
       - WORKER_LOG_LEVEL=info
-    deploy:
-      mode: replicated
-      replicas: 3
+    # deploy:
+    #   mode: replicated
+    #   replicas: 3
     restart: always
     network_mode: "host"
