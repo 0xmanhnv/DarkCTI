@@ -1,12 +1,12 @@
-import vi from "languages/Vietnamese";
-import fr from "languages/French";
-import en from "languages/English";
+import vi from "./languages/Vietnamese.js";
+import fr from "./languages/French.js";
+import en from "./languages/English.js";
 
 const i18n = {
   messages: {
     vi: vi,
     fr: fr,
-    en: en
+    en: en,
   },
 };
 
