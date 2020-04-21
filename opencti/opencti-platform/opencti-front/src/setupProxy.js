@@ -6,7 +6,7 @@ const onError = function(err, req, res) {
 };
 
 module.exports = function(app) {
-  app.use(createProxyMiddleware("/graphql", { target: "http://10.10.125.236:4000", ws: true, onError }));
-  app.use(createProxyMiddleware("/storage", { target: "http://10.10.125.236:4000", onError }));
-  app.use(createProxyMiddleware("/auth/**", { target: "http://10.10.125.236:4000", onError }));
+  app.use(createProxyMiddleware("/graphql", { target: "http://127.0.0.1:4000", ws: true, onError }));
+  app.use(createProxyMiddleware("/storage", { target: "http://127.0.0.1:4000", onError }));
+  app.use(createProxyMiddleware("/auth/**", { target: "http://127.0.0.1:4000", onError }));
 };
