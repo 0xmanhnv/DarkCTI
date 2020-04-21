@@ -6,7 +6,7 @@ services:
       - OPENCTI_URL=${OPENCTI_URL}
       - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
       - WORKER_LOG_LEVEL=info
-    deploy:
+    deploy: #docker-compose --compatibility up
       mode: replicated
       replicas: 3
     restart: always
