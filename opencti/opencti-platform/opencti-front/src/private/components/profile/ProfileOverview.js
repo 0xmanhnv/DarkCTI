@@ -157,6 +157,7 @@ class ProfileOverviewComponent extends Component {
                   <MenuItem value="auto">
                     <em>{t('Automatic')}</em>
                   </MenuItem>
+                  <MenuItem value="vi">Việt Nam</MenuItem>
                   <MenuItem value="en">English</MenuItem>
                   <MenuItem value="fr">Français</MenuItem>
                 </Field>
