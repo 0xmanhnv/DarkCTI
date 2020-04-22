@@ -15,11 +15,11 @@ services:
       - ALIENVAULT_BASE_URL=https://otx.alienvault.com
       - ALIENVAULT_API_KEY=046efd9268661e0ac97bd6f0b4cb238ec3dbc869cf26ccafdf17ed3927fbf5c4
       - ALIENVAULT_TLP=White
-      - ALIENVAULT_PULSE_START_TIMESTAMP=2020-01-01T00:00:00 # BEWARE! Could be a lot of pulses!
+      - ALIENVAULT_PULSE_START_TIMESTAMP=2019-06-01T00:00:00 # BEWARE! Could be a lot of pulses!
       - ALIENVAULT_REPORT_TYPE=Threat Report
       - ALIENVAULT_REPORT_STATUS=Analyzed
       - ALIENVAULT_GUESS_MALWARE=false # Use tags to guess malware.
-      - ALIENVAULT_INTERVAL_SEC=900
+      - ALIENVAULT_INTERVAL_SEC=450
     restart: always
     network_mode: "host"
   connector-amitt:
@@ -36,7 +36,7 @@ services:
       - CONNECTOR_LOG_LEVEL=info
       - AMITT_FILE_URL=https://raw.githubusercontent.com/VVX7/cti/master/amitt-attack/amitt-attack.json
       - PRE_AMITT_FILE_URL=https://raw.githubusercontent.com/VVX7/cti/master/amitt-pre-attack/amitt-pre-attack.json
-      - AMITT_INTERVAL=3 # Days
+      - AMITT_INTERVAL=2 # Days
     restart: always
     network_mode: "host"
 
@@ -97,7 +97,7 @@ services:
       - CVE_IMPORT_HISTORY=true
       - CVE_NVD_DATA_FEED=https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-recent.json.gz
       - CVE_HISTORY_DATA_FEED=https://nvd.nist.gov/feeds/json/cve/1.1/
-      - CVE_INTERVAL=3 # Days
+      - CVE_INTERVAL=2 # Days
     restart: always
     network_mode: "host"
   connector-cyber-threat-coalition:
@@ -112,7 +112,7 @@ services:
       - CONNECTOR_CONFIDENCE_LEVEL=3
       - CONNECTOR_UPDATE_EXISTING_DATA=false
       - CONNECTOR_LOG_LEVEL=info
-      - CYBER_THREAT_COALITION_INTERVAL=10800 # Seconds (3 hours)
+      - CYBER_THREAT_COALITION_INTERVAL=3600 # Seconds (1 hours)
       - CYBER_THREAT_COALITION_BASE_URL=https://blacklist.cyberthreatcoalition.org/vetted
     restart: always
     network_mode: "host"
@@ -235,7 +235,7 @@ services:
       - CONNECTOR_LOG_LEVEL=info
       - MITRE_ENTERPRISE_FILE_URL=https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json
       - MITRE_PRE_ATTACK_FILE_URL=https://raw.githubusercontent.com/mitre/cti/master/pre-attack/pre-attack.json
-      - MITRE_INTERVAL=3 # Days
+      - MITRE_INTERVAL=2 # Days
     restart: always
     network_mode: "host"
   connector-opencti:
@@ -252,7 +252,7 @@ services:
       - CONNECTOR_LOG_LEVEL=info
       - CONFIG_SECTORS_FILE_URL=https://raw.githubusercontent.com/OpenCTI-Platform/datasets/master/data/sectors.json
       - CONFIG_GEOGRAPHY_FILE_URL=https://raw.githubusercontent.com/OpenCTI-Platform/datasets/master/data/geography.json
-      - CONFIG_INTERVAL=3 # Days
+      - CONFIG_INTERVAL=2 # Days
     restart: always
     network_mode: "host"
   connector-virustotal:
