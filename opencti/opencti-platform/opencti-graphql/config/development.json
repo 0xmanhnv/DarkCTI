@@ -1,0 +1,49 @@
+{
+  "app": {
+    "port": 4000,
+    "logs": "./logs",
+    "logs_level": "info",
+    "reactive": true,
+    "cookie_secure": false,
+    "base_path" : "",
+    "platform_demo": false,
+    "admin": {
+      "email": "admin@darkcti.com",
+      "password": "d4rkctiadmin",
+      "token": "815dd7b7-1b96-4cb1-9b0e-27d9a3d88fdb"
+    }
+  },
+  "grakn": {
+    "hostname": "localhost",
+    "port": 48555,
+    "timeout": 30000
+  },
+  "redis": {
+    "hostname": "localhost",
+    "port": 6379
+  },
+  "elasticsearch": {
+    "url": "http://localhost:9200",
+    "noQueryCache": false
+  },
+  "minio": {
+    "endpoint": "localhost",
+    "port": 9000,
+    "use_ssl": false,
+    "access_key": "minio@darkcti.com",
+    "secret_key": "d4rkctiadmin"
+  },
+  "rabbitmq": {
+    "hostname": "localhost",
+    "port": 5672,
+    "port_management": 15672,
+    "management_ssl": false,
+    "username": "guest",
+    "password": "guest"
+  },
+  "providers": {
+    "local": {
+      "strategy": "LocalStrategy"
+    }
+  }
+}
