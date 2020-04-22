@@ -1,19 +1,19 @@
 const fr = {
     // Titles
     'OpenCTI - Cyber threat intelligence platform':
-        "OpenCTI - Plateforme d'analyse de la cybermenace",
+      "OpenCTI - Plateforme d'analyse de la cybermenace",
     // Errors
     Error: 'Erreur',
     'Wrong name or password': "Nom d'utilisateur ou mot de passe incorrect",
     'An unknown error has occurred!  Please try again later.':
-        'Une erreur est survenue ! Merci de rééssayer plus tard.',
+      'Une erreur est survenue ! Merci de rééssayer plus tard.',
     'You must be logged in to do this.':
-        'Vous devez être authentifié pour faire cette action.',
+      'Vous devez être authentifié pour faire cette action.',
     'You are not allowed to do this.':
-        "Vous n'ête pas autorisés à faire cette action.",
+      "Vous n'ête pas autorisés à faire cette action.",
     'You have successfully logged out.': 'Vous avez bien été déconnecté.',
     'You do not have any access to the knowledge of this OpenCTI instance.':
-        "Vous n'avez aucun accès à la connaissance de cette instance OpenCTI.",
+      "Vous n'avez aucun accès à la connaissance de cette instance OpenCTI.",
     // Dependencies
     Grakn: 'Grakn',
     Elasticsearch: 'Elasticsearch',
@@ -25,72 +25,73 @@ const fr = {
     Search: 'Rechercher',
     'Search for a threat...': 'Rechercher une menace...',
     'Do you want to delete this user?':
-        'Souahitez-vous supprimer cet utilisateur ?',
+      'Souahitez-vous supprimer cet utilisateur ?',
     'Do you want to delete this group?':
-        'Souahitez-vous supprimer ce groupe ?',
+      'Souahitez-vous supprimer ce groupe ?',
     'Do you want to delete this threat actor?':
-        'Souhaitez-vous supprimer cet acteur ?',
+      'Souhaitez-vous supprimer cet acteur ?',
     'Do you want to delete this intrusion set?':
-        'Souhaitez-vous supprimer ce mode opératoire ?',
+      'Souhaitez-vous supprimer ce mode opératoire ?',
     'Do you want to delete this campaign?':
-        'Souhaitez-vous supprimer cette campagne ?',
+      'Souhaitez-vous supprimer cette campagne ?',
     'Do you want to delete this incident?':
-        'Souhaitez-vous supprimer cet incident ?',
+      'Souhaitez-vous supprimer cet incident ?',
     'Do you want to delete this malware?':
-        'Souhaitez-vous supprimer ce code malveillant ?',
+      'Souhaitez-vous supprimer ce code malveillant ?',
     'Do you want to delete this marking definition?':
-        'Souhaitez-vous supprimer ce marquage ?',
+      'Souhaitez-vous supprimer ce marquage ?',
     'Do you want to delete this kill chain phase?':
-        'Souhaitez-vous supprimer cette étape de kill chain ?',
+      'Souhaitez-vous supprimer cette étape de kill chain ?',
     'Do you want to delete this report?':
-        'Souhaitez-vous supprimer ce rapport ?',
+      'Souhaitez-vous supprimer ce rapport ?',
     'Do you want to delete this external reference?':
-        'Souhaitez-vous supprimer cette référence externe ?',
+      'Souhaitez-vous supprimer cette référence externe ?',
     'Do you want to delete this region?':
-        'Souhaitez-vous supprimer cette région ?',
+      'Souhaitez-vous supprimer cette région ?',
     'Do you want to delete this country?':
-        'Souhaitez-vous supprimer ce pays ?',
+      'Souhaitez-vous supprimer ce pays ?',
     'Do you want to delete this city?':
-        'Souhaitez-vous supprimer cette ville ?',
+      'Souhaitez-vous supprimer cette ville ?',
     'Do you want to delete this sector?':
-        'Souhaitez-vous supprimer ce secteur ?',
+      'Souhaitez-vous supprimer ce secteur ?',
     'Do you want to delete this organization?':
-        'Souhaitez-vous supprimer cette organisation ?',
+      'Souhaitez-vous supprimer cette organisation ?',
     'Do you want to delete this person?':
-        'Souhaitez-vous supprimer cette personne ?',
+      'Souhaitez-vous supprimer cette personne ?',
     'Do you want to delete this relation?':
-        'Souhaitez-vous supprimer cette relation ?',
+      'Souhaitez-vous supprimer cette relation ?',
     'Do you want to delete this workspace?':
-        'Souhaitez-vous supprimer cet espace de travail ?',
+      'Souhaitez-vous supprimer cet espace de travail ?',
     'Do you want to delete this attack pattern?':
-        'Souhaitez-vous supprimer cette TTP ?',
+      'Souhaitez-vous supprimer cette TTP ?',
     'Do you want to delete this course of action?':
-        'Souhaitez-vous supprimer cette conduite à suivre ?',
+      'Souhaitez-vous supprimer cette conduite à suivre ?',
     'Do you want to delete this tool?':
-        'Souhaitez-vous supprimer cet outil ?',
+      'Souhaitez-vous supprimer cet outil ?',
     'Do you want to delete this vulnerability?':
-        'Souhaitez-vous supprimer cette vulnérabilité ?',
+      'Souhaitez-vous supprimer cette vulnérabilité ?',
     'Do you want to delete this indicator?':
-        'Souhaitez-vous supprimer cet indicateur ?',
+      'Souhaitez-vous supprimer cet indicateur ?',
     'Do you want to delete this observable?':
-        'Souhaitez-vous supprimer cet observable ?',
+      'Souhaitez-vous supprimer cet observable ?',
     'Do you want to remove the entity from this report?':
-        'Souhaitez-vous retirer cette entité de ce rapport ?',
+      'Souhaitez-vous retirer cette entité de ce rapport ?',
     'Do you want to delete this attribute?':
-        'Souhaitez-vous supprimer cet attribut ?',
+      'Souhaitez-vous supprimer cet attribut ?',
     'Do you want to remove this external reference?':
-        'Souhaitez-vous supprimer cette référence externe ?',
+      'Souhaitez-vous supprimer cette référence externe ?',
     'Do you want to remove the observable from this indicator?':
-        'Souhaitez-vous supprimer cet observable de cet indicateur ?',
+      'Souhaitez-vous supprimer cet observable de cet indicateur ?',
     'Do you want to delete this role?': 'Souhaitez-vous supprimer ce rôle ?',
     'Do you want to delete this tag?': 'Souhaitez-vous supprimer ce tag ?',
+    'Do you want to delete this note?': 'Souhaitez-vous supprimer cette note ?',
     'Do you want to delete these entities?':
-        'Souhaitez-vous supprimer ces entités ?',
+      'Souhaitez-vous supprimer ces entités ?',
     'Confirmation required': 'Confirmation requise',
     Information: 'Informations',
     'Last reports': 'Derniers rapports',
     'Last reports wrote by the entity':
-        'Derniers rapports écrits par cette entité',
+      'Derniers rapports écrits par cette entité',
     'Last reports about the entity': "Derniers rapports à propos de l'entité",
     'Last observables': 'Derniers observables',
     'observable(s)': 'observable(s)',
@@ -100,9 +101,9 @@ const fr = {
     'Authentication strategies': "Stratégies d'authentification",
     'Granted by default': 'Alloué par défaut',
     'Granted by default at user creation':
-        "Alloué par défaut à la création d'un utilisateur",
+      "Alloué par défaut à la création d'un utilisateur",
     'Unauthorized action, please refresh your browser':
-        'Action non autorisée, merci de rafraichir votre navigateur',
+      'Action non autorisée, merci de rafraichir votre navigateur',
     Capabilities: 'Capacités',
     Title: 'Titre',
     'Sender email address': "Adresse mail d'expédition",
@@ -136,23 +137,23 @@ const fr = {
     'Select your file': 'Selectionner votre fichier',
     selected: 'sélectionné(s)',
     'The importation of the file has been started':
-        "L'importation du fichier a été lancée",
+      "L'importation du fichier a été lancée",
     Add: 'Ajouter',
     'Turn to user': 'Transformer en utilisateur',
     'This person is now a user':
-        'Cette personne est maintenant un utilisateur',
+      'Cette personne est maintenant un utilisateur',
     'This relation is inferred': 'Cette relation est inférée',
     'This field is required': 'Ce champ est requis',
     'This field must only contain alphanumeric chars, dashes and space':
-        'Ce champ ne peut contenir que des caractères alphanumériques, des tirets et des espaces',
+      'Ce champ ne peut contenir que des caractères alphanumériques, des tirets et des espaces',
     'The value is too short': 'La valeur est trop courte',
     'The value is too long': 'La valeur est trop longue',
     'The value must be a number': 'La valeur doit être un nombre',
     'The value must be an email address':
-        'La valeur doit être une adresse email',
+      'La valeur doit être une adresse email',
     'The value must be an URL': 'La valeur doit être une URL',
     'The value must be a date (YYYY-MM-DD)':
-        'La valeur doit être une date (AAAA-MM-JJ)',
+      'La valeur doit être une date (AAAA-MM-JJ)',
     'The values do not match': 'Les valeurs ne correspondent pas',
     'No available options': 'Aucune option disponible',
     'No description of this usage': 'Aucune description de cet usage',
@@ -217,7 +218,7 @@ const fr = {
     'Create an indicator': 'Créer un indicateur',
     'Update an indicator': 'Modifier un indicateur',
     'Create an indicator from this observable':
-        'Créer un indicateur à partir de cet observable',
+      'Créer un indicateur à partir de cet observable',
     'Create a relationship': 'Créer une relation',
     'Update a relationship': 'Modifier une relation',
     'Select a relationship': 'Sélectionner une relation',
@@ -225,6 +226,8 @@ const fr = {
     'Update an attribute': 'Modifier un attribut',
     'Create a role': 'Créer un rôle',
     'Update a role': 'Modifier un rôle',
+    'Create a note': 'Créer une note',
+    'Update a note': 'Modifier une note',
     'Add external references': 'Ajouter des références externes',
     'Add courses of action': 'Ajouter des conduites à suivre',
     'Add subsectors': 'Ajouter des sous-secteurs',
@@ -247,39 +250,39 @@ const fr = {
     'Merged entity': 'Entité fusionnée',
     'Demo credentials': 'Identifiants de démo',
     'User will be created with default roles.':
-        "L'utilisateur sera créé avec les rôles par défaut.",
+      "L'utilisateur sera créé avec les rôles par défaut.",
     'No connectors are enabled on this platform.':
-        "Aucun connecteur n'est actif sur cette plateforme",
+      "Aucun connecteur n'est actif sur cette plateforme",
     'Enabled import connectors': "Connecteurs d'import activés",
     'No enrichment connectors on this platform':
-        "Aucun connecteur d'enrichissement sur cette plateforme",
+      "Aucun connecteur d'enrichissement sur cette plateforme",
     'Enrichment connectors': "Connecteurs d'enrichissement",
     'Registered connectors': 'Connecteurs enregistrés',
     'The relations attached to selected entities will be copied to the merged entity.':
-        "Les relations attachées aux entités sélectionnées seront copiées sur l'entité fusionnée.",
+      "Les relations attachées aux entités sélectionnées seront copiées sur l'entité fusionnée.",
     Scope: 'Périmètre',
     Modified: 'Modifié',
     'No import connectors on this platform':
-        "Aucun connecteur d'import sur cette plateforme",
+      "Aucun connecteur d'import sur cette plateforme",
     'No connectors for this type of observable':
-        "Aucun connecteur pour ce type d'observable",
+      "Aucun connecteur pour ce type d'observable",
     'This connector is active': 'Ce connecteur est actif',
     'This connector is disconnected': 'Ce connecteur est déconnecté',
     'Reset the connector state': "Réinitialiser l'état du connecteur",
     'Clear this connector': 'Supprimer ce connecteur',
     'The connector state has been reset':
-        "L'état du connecteur a été réinitialisé",
+      "L'état du connecteur a été réinitialisé",
     'The connector has been cleared': 'Le connecteur a été supprimé',
     'Refresh the knowledge using this connector':
-        'Actualiser la connaissance en utilisant ce connecteur',
+      'Actualiser la connaissance en utilisant ce connecteur',
     'Sectors, organizations and persons':
-        'Secteurs, organisations et personnes',
+      'Secteurs, organisations et personnes',
     'Regions, countries and cities': 'Régions, pays et villes',
     'Direct targeting of this sector': 'Ciblage direct de ce secteur',
     'Direct targeting of this region': 'Ciblage direct de cette région',
     'Direct targeting of this country': 'Ciblage direct de ce pays',
     'Groups permissions on data marking is not fully implemented yet.':
-        "Les permissions des groupes sur le marquage des données n'est pas encore implémenté.",
+      "Les permissions des groupes sur le marquage des données n'est pas encore implémenté.",
     // Menu
     Dashboard: 'Tableau de bord',
     Visualization: 'Visualisation',
@@ -332,7 +335,7 @@ const fr = {
     Indicator: 'Indicateur',
     Indicators: 'Indicateurs',
     'Indicators composed with this observable':
-        'Indicateurs composés avec cet observable',
+      'Indicateurs composés avec cet observable',
     Overview: 'Aperçu',
     Relationships: 'Relations',
     Entities: 'Entités',
@@ -456,7 +459,7 @@ const fr = {
     'CSV file': 'Fichier CSV',
     'Export data in CSV': 'Exporter les données en CSV',
     'The CSV file has been generated with the parameters of the view and is ready for download.':
-        'Le fichier CSV a été généré avec les paramètres de la vue et est prêt pour être téléchargé.',
+      'Le fichier CSV a été généré avec les paramètres de la vue et est prêt pour être téléchargé.',
     'Generated the': 'Généré le',
     'Never generated': 'Jamais généré',
     'Generation in progress...': 'Génération en cours...',
@@ -465,10 +468,10 @@ const fr = {
     'Export type': "Type d'export",
     'Generate an export': 'Générer un export',
     'No export connector available to generate an export':
-        "Aucun connecteur d'export disponible pour générer un export",
+      "Aucun connecteur d'export disponible pour générer un export",
     'Simple export (just the entity)': "Export simple (seulement l'entité)",
     'Full export (entity and first neighbours)':
-        'Export complet (entité et ses voisins)',
+      'Export complet (entité et ses voisins)',
     'Uploaded files': 'Fichiers uploadés',
     'File successfully removed': 'Fichier supprimé avec succès',
     'File successfully uploaded': 'Fichier uploadé avec succès',
@@ -508,7 +511,7 @@ const fr = {
     Name: 'Nom',
     Description: 'Description',
     'This sector does not have any description.':
-        "Ce secteur n'a aucune description.",
+      "Ce secteur n'a aucune description.",
     'Relationship type': 'Type de relation',
     'Creation date': 'Date de création',
     'Modification date': 'Date de modification',
@@ -521,6 +524,7 @@ const fr = {
     Definition: 'Définition',
     Level: 'Niveau',
     Color: 'Couleur',
+    Content: 'Contenu',
     'Force now': 'Forcer maintenant',
     Type: 'Type',
     'Email address': 'Adresse email',
@@ -536,9 +540,9 @@ const fr = {
     Confirmation: 'Confirmation',
     'Kill chain': 'Kill chain',
     'This feature is not available yet.':
-        "Cette fonctionnalité n'est pas encore disponible.",
+      "Cette fonctionnalité n'est pas encore disponible.",
     'This page is not found on this OpenCTI application.':
-        'Cette page est introuvable sur cette application OpenCTI.',
+      'Cette page est introuvable sur cette application OpenCTI.',
     'Phase name': "Nom de l'étape",
     'Kill chain name': 'Nom de la kill chain',
     Order: 'Ordre',
@@ -635,7 +639,7 @@ const fr = {
     '[Incidents] Timeseries': '[Incidents] Séries temporelles',
     '[TTPs] Distribution': '[TTPs] Répartition',
     '[Killchain] Tactics and procedures':
-        '[Killchain] Tactiques et procédures',
+      '[Killchain] Tactiques et procédures',
     'No widget in this workspace': 'Aucun widget dans cet espace de travail',
     'Averages of context relations': 'Moyennes des relations de contexte',
     'Synthesis of knowledge': 'Synthèse de la connaissance',
@@ -665,17 +669,18 @@ const fr = {
     'Total observables': "Nombre d'observables",
     'Total reports': 'Nombre de rapports',
     'Total workspaces': "Nombre d'espaces de travail",
+    'Total notes': "Nombre de notes",
     'Total relations': 'Nombre de relations',
     'Total indicators': "Nombre d'indicateurs",
     'Total direct relations': 'Nombre de relations directes',
     'Distribution of relations (including inferred)':
-        'Répartition des relations (inférences incluses)',
+      'Répartition des relations (inférences incluses)',
     'Distribution of relations': 'Répartition des relations',
     'Ingested entities': 'Entités stockées',
     'last 24h': 'dernières 24h',
     'last month': 'dernier mois',
     'No entities were found for this search.':
-        "Aucune entité n'a été trouvée pour cette recherche.",
+      "Aucune entité n'a été trouvée pour cette recherche.",
     'API access': "Accès à l'API",
     Example: 'Exemple',
     'API key': "Clé d'API",
@@ -684,29 +689,32 @@ const fr = {
     All: 'Tout',
     Clear: 'Effacer',
     'No entities of this type has been found.':
-        "Aucune entité de ce type n'a été trouvée.",
+      "Aucune entité de ce type n'a été trouvée.",
+    'No notes about this entity yet.':
+      'Aucune note concernant cette entité pour le moment',
+    'Notes about this entity': 'Notes à propos de cette entité',
     // Explore
     'Kill chains': 'Kill chains',
     'Explore the victims and the targets of the dataset through space and time.':
-        "Explorer les victimes et les cibles des données à travers l'espace et le temps",
+      "Explorer les victimes et les cibles des données à travers l'espace et le temps",
     'Explore the attack campaigns of the dataset through time and involved entities.':
-        "Explorer les campagnes d'attaques des données à travers le temps et les entités impliquées.",
+      "Explorer les campagnes d'attaques des données à travers le temps et les entités impliquées.",
     'Explore the techniques, tactics and procedures of the dataset through time and entities who used its.':
-        'Explorer les techniques, tactiques et procédures des données à travers le temps et les entités qui les utilisent.',
+      'Explorer les techniques, tactiques et procédures des données à travers le temps et les entités qui les utilisent.',
     'Explore the kill chains of entities through time and other contextual information like campaigns or incidents.':
-        "Explorer les kill chains des entités à travers le temps et d'autres informations contextuelles comme les campagnes ou les incidents.",
+      "Explorer les kill chains des entités à travers le temps et d'autres informations contextuelles comme les campagnes ou les incidents.",
     'Explore the vulnerabilities used by entities through time and kill chain phases.':
-        'Explorer les vulnérabilités utilisées par les entités à travers le temps et les phases de la kill chain.',
+      'Explorer les vulnérabilités utilisées par les entités à travers le temps et les phases de la kill chain.',
     'Explore the observables of the dataset though time to visualize clusters and correlations.':
-        'Explorer les observables des données à travers le temps pour visualiser des clusters et des corrélations.',
+      'Explorer les observables des données à travers le temps pour visualiser des clusters et des corrélations.',
     'Origins of the targeting': 'Origines du ciblage',
     'Types of the targeting': 'Types de ciblage',
     'Types of the targets': 'Types de cibles',
-    'Targeted entities types': "Types d'entités ciblées",
-    'Targeted entities through time': "Ciblages d'entités à travers le temps",
+    'Targeted entity types': "Types d'entités ciblées",
+    'Targeted entity through time': "Ciblages d'entités à travers le temps",
     'Number of targeting': 'Nombre de ciblages',
     'Related entities (generic relation "related-to")':
-        'Entités liées (relation générique "lié à")',
+      'Entités liées (relation générique "lié à")',
     Platforms: "Systèmes d'exploitation",
     Platform: "Système d'exploitation",
     'Required permissions': 'Permissions requises',
@@ -731,6 +739,7 @@ const fr = {
     entity_report: 'Rapport',
     entity_vulnerability: 'Vulnérabilité',
     entity_indicator: 'Indicateur',
+    entity_note: 'Note',
     entity_all: 'Toutes les entités',
     'entity_course-of-action': 'Mesure de mitigation',
     'entity_Kill-Chain-Phase': 'phases de kill chain',
@@ -739,6 +748,7 @@ const fr = {
     entity_Country: 'pays',
     entity_Region: 'régions',
     entity_Indicator: 'indicateurs',
+    entity_Note: 'notes',
     'entity_Attack-Pattern': 'TTPs',
     'entity_Stix-Observable': 'observables',
     entity_targets: 'cible',
@@ -853,6 +863,6 @@ const fr = {
     INTERNAL_IMPORT_FILE: 'Import de fichiers',
     INTERNAL_EXPORT_FILE: 'Export de fichiers',
     INTERNAL_ENRICHMENT: 'Enrichissement',
-    }
+  }
 
 export default fr;
