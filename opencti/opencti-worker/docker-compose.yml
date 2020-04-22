@@ -8,6 +8,6 @@ services:
       - WORKER_LOG_LEVEL=info
     deploy: #docker-compose --compatibility up
       mode: replicated
-      replicas: 5
+      replicas: 10
     restart: always
     network_mode: "host"
