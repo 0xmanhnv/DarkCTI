@@ -15,8 +15,9 @@ export const dayStartDate = () => {
 export const parse = (date) => moment(date);
 
 export const now = () => moment().format();
-
 export const dayAgo = () => moment().subtract(1, 'days').format();
+
+export const daysAgo = (number) => moment().subtract(number, 'days').format();
 export const monthsAgo = (number) => moment().subtract(number, 'months').format();
 export const yearsAgo = (number) => moment().subtract(number, 'years').format();
 
