@@ -25,7 +25,7 @@ import YAxis from 'recharts/lib/cartesian/YAxis';
 import CartesianGrid from 'recharts/lib/cartesian/CartesianGrid';
 import Tooltip from 'recharts/lib/component/Tooltip';
 import { QueryRenderer } from '../../relay/environment';
-import { monthsLatter, dayAgo , now} from '../../utils/Time';
+import { monthsLatter, dayAgo } from '../../utils/Time';
 import Theme from '../../components/Theme';
 import inject18n from '../../components/i18n';
 import ItemNumberDifference from '../../components/ItemNumberDifference';
@@ -199,7 +199,7 @@ class Dashboard extends Component {
     const stixDomainEntitiesTimeSeriesVariables = {
       field: 'created_at',
       operation: 'count',
-      startDate: dayAgo(),
+      startDate: dayAgo(2),
       endDate: monthsLatter(1),
       interval: 'day',
     };
@@ -220,7 +220,7 @@ class Dashboard extends Component {
               >
                 <QueryRenderer
                   query={dashboardStixDomainEntitiesNumberQuery}
-                  variables={{ endDate: dayAgo() }}
+                  variables={{ endDate: dayAgo(1) }}
                   render={({ props }) => {
                     if (props && props.stixDomainEntitiesNumber) {
                       const { total } = props.stixDomainEntitiesNumber;
@@ -253,7 +253,7 @@ class Dashboard extends Component {
               >
                 <QueryRenderer
                   query={dashboardStixDomainEntitiesNumberQuery}
-                  variables={{ types: ['report'], endDate: dayAgo() }}
+                  variables={{ types: ['report'], endDate: dayAgo(1) }}
                   render={({ props }) => {
                     if (props && props.stixDomainEntitiesNumber) {
                       const { total } = props.stixDomainEntitiesNumber;
@@ -288,7 +288,7 @@ class Dashboard extends Component {
               >
                 <QueryRenderer
                   query={dashboardStixObservablesNumberQuery}
-                  variables={{ endDate: dayAgo() }}
+                  variables={{ endDate: dayAgo(1) }}
                   render={({ props }) => {
                     if (props && props.stixObservablesNumber) {
                       const { total } = props.stixObservablesNumber;
@@ -321,7 +321,7 @@ class Dashboard extends Component {
               >
                 <QueryRenderer
                   query={dashboardStixDomainEntitiesNumberQuery}
-                  variables={{ types: ['workspace'], endDate: dayAgo() }}
+                  variables={{ types: ['workspace'], endDate: dayAgo(1) }}
                   render={({ props }) => {
                     if (props && props.stixDomainEntitiesNumber) {
                       const { total } = props.stixDomainEntitiesNumber;
