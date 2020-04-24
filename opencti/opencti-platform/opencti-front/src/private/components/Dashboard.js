@@ -230,7 +230,7 @@ class Dashboard extends Component {
     const stixDomainEntitiesTimeSeriesVariables = {
       field: 'created_at',
       operation: 'count',
-      startDate: daysAgo(5),
+      startDate: daysAgo(6),
       endDate: monthsLatter(2),
       interval: 'day',
     };
